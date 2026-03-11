@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Artigos | Codificando Ideias</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<link rel="stylesheet" href="css/blog.css">
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-blur">
+
+<div class="container">
+
+<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+
+<img src="./assets/logo-master-transparent.png"
+alt="Codificando Ideias"
+class="logo-navbar"
+height="42">
+
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#nav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="https://codificandoideias.com/" target="_blank">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="#">Artigos</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- MAIN -->
+
+<main class="main-artigos">
+
+<div class="container">
+
+<h1 class="titulo-artigos">Artigos</h1>
+
+
+<!-- BUSCA -->
+
+<input
+type="text"
+id="busca"
+class="form-control busca-artigos"
+placeholder="Buscar artigos..."
+>
+
+
+<!-- HERO ARTIGO -->
+
+<div id="artigo-destaque"></div>
+
+
+<hr class="separador">
+
+
+<!-- GRID -->
+
+<div class="row g-4" id="lista-artigos"></div>
+
+
+</div>
+
+</main>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter-section">
+
+<div class="container">
+
+<div class="newsletter-box">
+
+<h3>Receba novos conteúdos</h3>
+
+<p>Entre para a newsletter da Codificando Ideias.</p>
+
+<a href="https://newsletter.codificandoideias.com/" target="_blank" class="btn btn-primary">Inscrever-se</a>
+
+<p class="newsletter-info">
+
+Seus dados estão seguros e não compartilhamos informações.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer-ci">
+
+<div class="container text-center">
+
+<div class="footer-brand">
+
+<a href="index.html">
+
+<img src="./assets/logo-master-transparent.png"
+alt="Codificando Ideias"
+class="logo-footer">
+
+</a>
+
+<p class="footer-tagline">
+Impulsionando negócios através da tecnologia.
+</p>
+
+</div>
+
+
+<div class="footer-social">
+
+<a href="https://www.linkedin.com/company/codificando-ideias/"
+target="_blank"><i class="bi bi-linkedin"></i></a>
+
+<a href="https://github.com/Codificando-Ideias"
+target="_blank"><i class="bi bi-github"></i></a>
+
+<a href="https://www.instagram.com/codificando.ideias"
+target="_blank"><i class="bi bi-instagram"></i></a>
+
+<a href="https://codificandoideias.substack.com/"
+target="_blank"><i class="bi bi-substack"></i></a>
+
+</div>
+
+<small class="footer-copy">
+
+© <script>document.write(new Date().getFullYear());</script>
+Codificando Ideias
+
+</small>
+
+</div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/artigos.js"></script>
+
+</body>
+</html>

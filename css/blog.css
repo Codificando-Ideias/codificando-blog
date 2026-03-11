@@ -1,0 +1,372 @@
+/* ================================
+ROOT VARIABLES (MESMAS DO SITE)
+================================ */
+
+:root{
+    --bg:#0B1120;
+    --bg-alt:#0F172A;
+    --card:#111827;
+    --accent:#2563EB;
+    --accent2:#7C3AED;
+    --text:#F8FAFC;
+
+    --navbar-height:80px;
+    --container:1100px;
+}
+
+
+/* ================================
+GLOBAL
+================================ */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui;
+    padding-top:var(--navbar-height);
+}
+
+
+/* ================================
+CONTAINER
+================================ */
+
+.container{
+    max-width:var(--container);
+}
+
+
+/* ================================
+NAVBAR (MESMA DO SITE)
+================================ */
+
+.navbar{
+    height:var(--navbar-height);
+    backdrop-filter:blur(20px);
+    background:rgba(11,17,32,0.6);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    transition:all .3s ease;
+}
+
+.navbar.scrolled{
+    background:#0B1120;
+    box-shadow:0 8px 30px rgba(0,0,0,.4);
+}
+
+.nav-link{
+    position:relative;
+    color:#fff !important;
+    transition:.3s;
+}
+
+.nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0%;
+    height:2px;
+    background:linear-gradient(45deg,var(--accent),var(--accent2));
+    transition:width .3s ease;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+.nav-link.active{
+    color:var(--accent2) !important;
+}
+
+
+/* ================================
+NAVBAR MOBILE
+================================ */
+
+@media (max-width:991px){
+
+.navbar-collapse{
+    background:rgba(11,17,32,0.98);
+    backdrop-filter:blur(20px);
+    padding:1.5rem;
+    border-radius:12px;
+    margin-top:10px;
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+.navbar-nav .nav-link{
+    padding:.75rem 0;
+    font-size:1.1rem;
+}
+
+.navbar{
+    height:auto;
+    padding:1rem 0;
+}
+
+}
+
+
+/* ================================
+LOGO
+================================ */
+
+.logo-navbar{
+    height:clamp(110px,12vw,220px);
+    filter:drop-shadow(0 0 30px rgba(124,58,237,.4));
+}
+
+.logo-navbar:hover{
+    transform:scale(1.05);
+}
+
+
+/* ================================
+MAIN BLOG
+================================ */
+
+.main-artigos{
+    padding:120px 0 80px;
+}
+
+
+/* ================================
+TÍTULO BLOG
+================================ */
+
+.titulo-artigos{
+    font-size:2.6rem;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+
+/* ================================
+BUSCA
+================================ */
+
+.busca-artigos{
+    background:#1e293b;
+    border:1px solid rgba(255,255,255,.08);
+    color:white;
+    padding:14px;
+    border-radius:10px;
+    margin-bottom:40px;
+}
+
+
+/* ================================
+ARTIGO DESTAQUE
+================================ */
+
+.hero-artigo{
+
+    background:var(--card);
+
+    padding:40px;
+
+    border-radius:14px;
+
+    border:1px solid #1f2937;
+
+    transition:.3s;
+
+}
+
+.hero-artigo:hover{
+
+    border-color:var(--accent);
+
+}
+
+.hero-artigo h2{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.hero-artigo p{
+
+    color:#cbd5e1;
+
+}
+
+
+/* ================================
+GRID ARTIGOS
+================================ */
+
+.card-artigo{
+
+    background:var(--card);
+
+    border-radius:12px;
+
+    border:1px solid #1f2937;
+
+    padding:24px;
+
+    transition:.3s;
+
+    height:100%;
+
+}
+
+.card-artigo:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--accent);
+
+}
+
+.card-artigo h5{
+
+    font-size:1.25rem;
+
+    margin-bottom:10px;
+
+}
+
+.card-artigo p{
+
+    color:#cbd5e1;
+
+    font-size:.92rem;
+
+}
+
+
+/* ================================
+BOTÃO
+================================ */
+
+.btn-artigo{
+
+    background:linear-gradient(45deg,var(--accent),var(--accent2));
+
+    border:none;
+
+    color:white;
+
+    border-radius:6px;
+
+    padding:8px 16px;
+
+    font-size:.85rem;
+
+    text-decoration:none;
+
+}
+
+.btn-artigo:hover{
+
+    opacity:.9;
+
+}
+
+
+/* ================================
+NEWSLETTER
+================================ */
+
+.newsletter-section{
+
+    padding:90px 0;
+
+    background:var(--bg-alt);
+
+}
+
+.newsletter-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    border:1px solid #1f2937;
+}
+
+
+/* ================================
+FOOTER
+================================ */
+
+.footer-brand-wrapper{
+  position:relative;
+  display:inline-block;
+  text-align:center;
+}
+
+.logo-footer{
+  height:250px;
+  display:block;
+  margin:0 auto;
+}
+
+.logo-footer:hover{
+  transform:scale(1.05);
+}
+
+.footer-tagline{
+  position:absolute;
+  bottom:-450px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:.95rem;
+  color:#e2e8f0;
+  white-space:nowrap;
+}
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  margin-bottom:30px;
+}
+
+.social-icon{
+  font-size:1.6rem;
+  transition:all .3s ease;
+}
+
+.social-icon:hover{
+  color:#7c3aed;
+  transform:translateY(-4px);
+}
+
+.footer-copy{
+  color:#cbd5e1;
+  font-size:.85rem;
+}
+
+
+/* ================================
+RESPONSIVE
+================================ */
+
+@media(max-width:768px){
+
+.hero-artigo{
+    padding:28px;
+}
+
+.titulo-artigos{
+    font-size:2rem;
+}
+
+}
